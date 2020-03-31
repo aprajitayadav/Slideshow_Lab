@@ -1,45 +1,44 @@
-var photoList = ["Flight", "Food","Hotel"];
-let plen = photoList.length
-let currentPhotoIndex=0;
+var slideshow={
+	photoList : ["Flight", "Food","Hotel"],
+    currentPhotoIndex:0,
+ 
+	getCurrentPhoto: function () {
+	        console.log(this.photoList[this.currentPhotoIndex])
+	        return null
+	},
 
-getCurrentPhoto();
-nextPhoto();
-nextPhoto();
-nextPhoto();
-prevPhoto();
-prevPhoto();
-prevPhoto();
+	nextPhoto: function ()  {
+		if (this.currentPhotoIndex < this.photoList.length-1) {
+			 this.currentPhotoIndex++
+	    	console.log(this.photoList[this.currentPhotoIndex])
+	        return null}
+	     else
+	     {
+	        console.log("End of slideshow");
+	        return null
+	    }
+	},
 
-function nextPhoto() {
-	if (currentPhotoIndex < plen-1) {
-		 currentPhotoIndex=currentPhotoIndex + 1
-    	console.log(photoList[currentPhotoIndex])
-        return null}
-     else
-     {
-        console.log("End of slideshow");
-        return null
-    }
+	prevPhoto: function () 
+		{
+	    
+	    if (this.currentPhotoIndex == 0) 
+	    	{
+	    	console.log("Already at start of slideshow")
+	        return null
+	  		}
+	    	else (this.currentPhotoIndex <= this.photoList.length-1) 
+	    	{
+	        	this.currentPhotoIndex--
+	        	console.log(this.photoList[this.currentPhotoIndex])
+	        	return null
+	     	}
+		}
 }
 
-function prevPhoto() 
-	{
-    
-    if (currentPhotoIndex == 0) 
-    	{
-    	console.log("Already at start of slideshow")
-        return null
-  		}
-    	else (currentPhotoIndex <= plen) 
-    	{
-        	currentPhotoIndex=currentPhotoIndex - 1
-        	console.log(photoList[currentPhotoIndex])
-        	return null
-     	}
-	}
-
-function getCurrentPhoto() {
-        console.log(photoList[currentPhotoIndex])
-        return null
-}
-
+slideshow.getCurrentPhoto();
+slideshow.nextPhoto();
+slideshow.nextPhoto();
+slideshow.nextPhoto();
+slideshow.prevPhoto();
+slideshow.prevPhoto();
