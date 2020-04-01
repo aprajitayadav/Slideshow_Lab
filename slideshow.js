@@ -11,8 +11,6 @@ var slideshow={
 		if (this.currentPhotoIndex < this.photoList.length-1) {
 			 this.currentPhotoIndex++
 	    	console.log(this.photoList[this.currentPhotoIndex])
-				    	console.log(this.photoList[this.currentPhotoIndex])
-
 	        return null}
 	     else
 	     {
