@@ -56,7 +56,7 @@ var slideshow={
 		        return null}
 		     else
 		     {
-		        console.log("End of slideshow!!!");
+		        console.log("End of slideshow!!! TEST AGAIN");
 				return
 		    }		
 		}
